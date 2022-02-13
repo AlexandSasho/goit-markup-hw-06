@@ -686,6 +686,7 @@ a {
 
 .modal-close-btn {
   position: absolute;
+  display: flex;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
@@ -695,7 +696,8 @@ a {
   right: 8px;
 }
 
-.modal-close-btn:hover {
+.modal-close-btn:hover,
+.modal-close-btn:focus {
   fill: var(--accent-color);
   outline: none;
 }
@@ -704,6 +706,10 @@ a {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+}
+
+.form-field {
+  margin-bottom: 10px;
 }
 
 .form-label {
@@ -745,7 +751,7 @@ a {
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  margin-bottom: 28px;
+
   padding-left: 15px;
   padding-top: 12px;
   resize: none;
@@ -807,6 +813,10 @@ a {
 .modal-check:checked + .modal-check-text::before {
   background-image: url(../images/icon-check.svg);
   border: none;
+}
+
+.modal-check:focus + .modal-check-text::before {
+  border-color: var(--accent-color);
 }
 
 .button-modal {
